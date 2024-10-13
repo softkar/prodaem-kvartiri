@@ -1,0 +1,295 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    background-color: #c8c8c8;
+  }
+  
+  .cardtext {
+    font-size:  14px;
+    line-height: 35px;
+    color: #c8c8c8;;
+  }
+  
+  .cardlink:hover {
+    opacity: 0.7;
+    transform: translateY(-5px)
+}
+.sidebar{
+    width: 270px;
+    min-width: 200px;
+}
+.widget:not(:last-child){
+    margin-bottom: 30px;
+}
+.widget_title{
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.widget_title::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("/img/chevron-up.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.location{
+    background-color: white;
+    width: 100%;
+    border-radius: 4px;
+}
+.location__row{
+    display: flex;
+}
+.location__row:first-child {
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #D6D6D6;
+  }
+  
+.location__row:last-child {
+    overflow: hidden;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid #D6D6D6;
+    border-top: none;
+}
+
+.location_label {
+    flex-grow: 1;
+    height: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #3C3C3C;
+    line-height: 50px;
+    cursor: pointer;
+    transition: background-color 0.6s ease-in-out;
+    border: none;
+}
+
+.location_label:hover{
+    background-color: #fff0bb;
+}
+.location_input{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    opacity: 0;
+}
+.location_input:checked+.location_label{
+    background-color: #FFCF26;
+}
+.location_input+.location_label:hover{
+    background-color: #FFCF26;
+}
+.radio_group{
+    display: block;
+    cursor: pointer;
+}
+.radio_group:not(:last-child){
+    margin-bottom: 15px;
+}
+.radio_button {
+    display: none;
+}
+.radio_fake{
+    position: relative;
+    display :inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: solid 1px #777;
+    vertical-align: bottom;
+
+}
+.radio_title {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.18;
+}
+.radio_button:checked~.radio_fake{
+    background-color: #FFCF26;
+}
+.radio_button:checked~.radio_title{
+    font-weight: 700;
+}
+.radio_button:checked~.radio_fake::before{
+    content: '';
+    position:absolute;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #3C3C3C;
+}
+.checkbox__group{
+    display: block;
+    cursor: pointer;
+}
+.checkbox__group:not(:last-child){
+    margin-bottom: 15px;
+}
+.checkbox_button{
+    display: none;
+}
+.checkbox__fake{
+    position: relative;
+    display :inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 2px;
+    border: solid 1px #777;
+    vertical-align: bottom;
+}
+.checkbox__title {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.18;
+}
+.checkbox_button:checked~.checkbox__fake{
+    background-color: #FFCF26;
+}
+.checkbox_button:checked~.checkbox__title{
+    font-weight: 700;
+}
+.checkbox_button:checked~.checkbox__fake::before{
+    content: '';
+    position:absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("img/check.svg");
+    background-repeat: no-repeat;
+    image-orientation: center;
+}
+.widget_hidden{
+    display: none;
+}
+.wiew_more{
+    display: inline-block;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  font-size: 16px;
+  line-height: 1.18;
+  color: #4290c9;
+  padding: 0;
+  cursor: pointer;
+}
+.wiew_more:hover{
+    text-decoration: underline;
+}
+.toggle{
+    cursor: pointer;
+}
+.toggle_button{
+    display: none;
+}
+.toggle__title{
+    font-size: 16px;
+    line-height: 1.18;
+    color:#000;
+}
+.toggle__fake{
+ position: relative;
+ display: inline-block;
+ vertical-align: bottom;
+ width: 37px;
+ height: 20px;
+ background-color: #8f8f8f;
+ border-radius: 10px;
+}
+.toggle__fake::before{
+    position: absolute;
+    top:2px;
+    left:2px;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #3b3b3b;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+.toggle_button:checked~.toggle__fake{
+    background-color: #FFE074;
+}
+.toggle_button:checked~.toggle__title{
+    font-weight: 700;
+}
+.toggle_button:checked~.toggle__fake::before{
+    left:19px;
+}
+.filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 50px;
+    background-color: #fff;
+    border: solid 1px #D6D6D6;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.18;
+    color:#3c3c3c;
+    transition: 0.2s ease-in;
+}
+.filter::after{
+    background-color: #e7e7e7;
+}
+.filter:not(:last-child){
+    margin-bottom: 10px;
+}
+.filter:hover{
+    background-color: #e7e7e7;
+}
+.btn_submit{
+    border: none;
+    background-color:#FFCF26;
+    color:black;
+}
+.btn_submit:hover{
+    background-color:#ffe173;
+}
+@media(max-width: 1200px) {
+    .container{
+    width: 830px;
+    }    
+}
+@media(max-width: 829px){
+    .container{
+        width: 600px;
+    }  
+    .sidebar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 15px;
+        background-color: white;
+        box-shadow: 0px 0px 20px 4px rgb(0 0 0 / 37%);
+
+    }
+}
+@media (max-width: 599px){
+    .cards-holder{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
